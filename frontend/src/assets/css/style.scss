@@ -1,0 +1,430 @@
+$primary-color: #fe538d;
+$secondary-color: #ffb703;
+$text-color: #000;
+$text-white: #fff;
+$dark-background: #222725;
+$light-background: hsl(150, 5%, 84%);
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital, wght@0,300..900;1,300..900&display=swap");
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+h1 {
+  font-size: 4.5em;
+}
+h2 {
+  font-size: 3em;
+}
+h3 {
+  font-size: 1.5em;
+}
+p {
+  font-size: 1.2em;
+}
+
+ul {
+  margin-left: 0;
+  padding-left: 0;
+  li {
+    list-style: none;
+  }
+  a {
+    color: $text-white;
+    font-size: 1.2em;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+.nav-link {
+  text-decoration: none;
+  &:hover {
+    color: $primary-color;
+  }
+}
+.large {
+  padding: 15px 20px;
+}
+
+.bg-light {
+  $light-background: hsl(150, 5%, 84%);
+}
+.btn-primary {
+  background-color: $primary-color;
+  border: 1px solid $primary-color;
+  padding: 10px 15px;
+  font-size: 1em;
+  font-weight: 500;
+  text-transform: uppercase;
+  &:hover {
+    background-color: darken($secondary-color, 10%);
+    border: 1px solid darken($secondary-color, 10%);
+  }
+}
+.btn-primary1 {
+  color: $text-white;
+  background-color: $primary-color;
+  border: 1px solid $primary-color;
+  border-radius: 20px;
+  padding: 8px 14px; // ⬅ reduced size
+  font-size: 14px; // ⬅ smaller text
+  font-weight: 500; // ⬅ normal readable weight
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: darken($secondary-color, 10%);
+    border-color: darken($secondary-color, 10%);
+    color: $text-white;
+  }
+}
+.btn-secondary1 {
+  color: $text-white;
+  background-color: $secondary-color;
+  border: 1px solid $secondary-color;
+  border-radius: 20px;
+  padding: 8px 14px; // ⬅ reduced size
+  font-size: 14px; // ⬅ smaller text
+  font-weight: 500; // ⬅ normal readable weight
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+    border-color: darken($primary-color, 10%);
+    color: $text-white;
+  }
+}
+
+.btn-secondary {
+  background-color: $secondary-color;
+  border: 1px solid $secondary-color;
+  padding: 10px 15px;
+  font-size: 1em;
+  font-weight: 500;
+  text-transform: uppercase;
+  &:hover {
+    background-color: darken($primary-color, 10%);
+    border: 1px solid darken($primary-color, 10%);
+  }
+}
+
+.section-header {
+  span {
+    color: $primary-color;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: block;
+    border-radius: 10px;
+  }
+  text-align: center;
+  margin-bottom: 50px;
+  h2 {
+    font-size: 2.5em;
+    color: $text-color;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 1.2em;
+    color: $text-color;
+  }
+}
+
+header {
+  nav {
+    .nav-link {
+      text-transform: uppercase;
+      font-size: 1em;
+      font-weight: 500;
+      color: $text-color;
+      margin-left: 20px;
+    }
+  }
+}
+
+footer {
+  background-color: $dark-background;
+  h3 {
+    color: $secondary-color;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  p {
+    color: $text-white;
+    font-size: 1em;
+  }
+  ul {
+    li {
+      padding: 5px 0;
+      a {
+        color: $text-white;
+        font-size: 1em;
+        text-decoration: none;
+      }
+    }
+  }
+}
+.section-1 {
+  .hero {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)),
+      url("../images/hero.jpg");
+    height: 800px;
+    color: $text-white;
+    span {
+      color: $secondary-color;
+      font-size: 1.5em;
+      font-weight: 500;
+    }
+  }
+}
+
+.section-2 {
+  img {
+    border-radius: 40px;
+  }
+  span {
+    color: $primary-color;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: block;
+    border-radius: 10px;
+  }
+}
+
+.section-3 {
+  .item {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+    &:hover {
+      .service-body {
+        bottom: 30px;
+        transform: translateY(0%);
+        .service-content {
+          opacity: 1;
+        }
+      }
+    }
+    .service-image {
+      position: relative;
+      overflow: hidden;
+      img {
+        width: 100%;
+        aspect-ratio: 1/1.2;
+        border-radius: 40px;
+        object-fit: cover;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        border-radius: 40px;
+        height: 100%;
+        // background: rgba(0, 0, 0, 0.5);
+        // transition: background 0.4s ease-in-out;
+        background: linear-gradient(
+          180deg,
+          rgba(217, 217, 217, 0) 0%,
+          rgba(217, 217, 217, 0) 13.02%,
+          rgba(0, 0, 0, 0.51) 42.5%,
+          rgba(0, 0, 0, 0.63) 70%,
+          #000000 100%
+        );
+      }
+    }
+
+    .service-body {
+      position: absolute;
+      color: $text-white;
+      right: 30px;
+      left: 30px;
+      bottom: 30px;
+      transform: translateY(80%);
+      transition: bottom 0.4s ease-in-out;
+
+      .service-content {
+        transition: bottom 0.4s ease-in-out;
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.section-4 {
+  .card {
+    border-radius: 20px;
+    margin-bottom: 20px;
+    .card-icon {
+      width: 80px;
+      height: 80px;
+      // background-color: $light-background;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+    .card-title {
+      margin-bottom: 15px;
+      h3 {
+        font-size: 1.5em;
+        color: $text-color;
+      }
+    }
+    p {
+      color: $text-color;
+    }
+  }
+}
+
+.section-5 {
+  .swiper {
+    padding: 10px 25px 50px 25px;
+    .swiper-pagination-bullet {
+      background-color: $secondary-color;
+      opacity: 1;
+    }
+  }
+
+  .card {
+    border-radius: 40px;
+    .card-body {
+      .rating {
+        font-size: 1.2em;
+      }
+    }
+    .content {
+      p {
+        color: $text-color;
+        font-size: 1em;
+      }
+    }
+    .meta {
+      img {
+        border-radius: 50%;
+      }
+    }
+    name {
+      font-size: 1.3em;
+      font-weight: 500;
+    }
+  }
+}
+
+/* Fix vertical text issue on mobile */
+@media (max-width: 767px) {
+  .section-5 .card {
+    width: 100%;
+  }
+
+  .section-5 .content {
+    writing-mode: horizontal-tb;
+    word-break: normal;
+    white-space: normal;
+    display: block;
+  }
+}
+
+.section-6 {
+  .card {
+    border-radius: 60px;
+    margin-bottom: 20px;
+    img {
+      border-top-left-radius: 60px;
+      //   border-top-right-radius: 40px;
+    }
+    .card-body {
+      h3 {
+        font-size: 1.5em;
+        color: $primary-color;
+        margin-bottom: 15px;
+      }
+      p {
+        color: $text-color;
+        font-size: 1em;
+      }
+    }
+  }
+}
+
+.section-7 {
+  .hero {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)),
+      url("../images/hero.jpg");
+    height: 500px;
+    color: $text-white;
+    span {
+      color: $secondary-color;
+      font-size: 1.5em;
+      font-weight: 500;
+    }
+  }
+}
+.section-8 {
+  .card {
+    border-radius: 40px;
+    margin-bottom: 40px;
+    img {
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+    }
+    .card-body {
+      h3 {
+        font-size: 1.5em;
+        color: $primary-color;
+        margin-bottom: 15px;
+      }
+      p {
+        color: $text-color;
+        font-size: 1em;
+      }
+    }
+  }
+}
+
+.dashboard {
+  .card {
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: $light-background;
+    h3 {
+      font-size: 1.5em;
+      color: $text-color;
+      margin-bottom: 15px;
+    }
+    p {
+      color: $text-color;
+      font-size: 1em;
+    }
+  }
+}
+// .sidebar {
+  .ul {
+    margin-left: 0;
+    padding-left: 0;
+    li {
+      list-style: none;
+    }
+    a {
+      display: block;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.21);
+      color: $text-color;
+      font-size: 1.2em;
+      text-decoration: none;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+// }
