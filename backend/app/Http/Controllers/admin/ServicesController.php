@@ -31,6 +31,7 @@ class ServicesController extends Controller
      */
     public function store(Request $request)
     {
+        $request->merge(['slug' => Str::slug($request->slug)]);
         $validator = Validator::make($request->all(), [
             'title' => 'required',
             'slug'  => 'required|unique:services,slug'
